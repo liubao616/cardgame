@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liubao.card.cardgame"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- 百度广告 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/laucher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data android:name="BaiduMobAd_APP_ID" android:value="b6024817" /> 
+		<meta-data android:name="BaiduMobAd_APP_SEC" android:value="b6024817" />
+		<activity android:name="com.baidu.mobads.AppActivity" 
+		    android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity
+            android:name="com.liubao.card.cardgame.FlashActivity"
+            android:label="@string/app_name" 
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        
+         <activity
+            android:name="com.liubao.card.cardgame.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.liubao.card.cardgame.GamesActivtiy"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.liubao.card.cardgame.DialogLevelActivity"
+            android:theme="@style/DialogStyle" >
+        </activity>
+        <activity
+            android:name="com.liubao.card.cardgame.ConfigActivity"
+             android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.liubao.card.cardgame.DialogMessageActivity"
+            android:theme="@style/DialogStyle" >
+        </activity>
+        
+        <service android:name="com.liubao.card.cardgame.MusicService">
+            <intent-filter >
+                <action android:name="com.liubao.cardgame"/>
+            </intent-filter>
+        </service>
+        
+    </application>
+
+</manifest>
