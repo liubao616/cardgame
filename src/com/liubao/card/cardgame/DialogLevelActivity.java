@@ -16,6 +16,8 @@ public class DialogLevelActivity extends Activity {
 	private TextView messageTextView;
 	private Button confirmButton;
 	int level;
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
